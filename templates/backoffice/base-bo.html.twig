@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{% block title %}{% endblock %} - Backoffice Thé Tip Top</title>
+        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+        <link rel="icon" type="image/x-icon" href="/images/content/favicon.png">
+        
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+        
+        {# <link rel="stylesheet" href="/assets-backoffice/css/dropify.css"> #}
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="/assets-backoffice/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets-backoffice/css/atlantis.css">
+        <link rel="stylesheet" href="/assets-backoffice/css/custom.css">
+        
+        <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+        
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="main-header">
+                {% include "backoffice/_partials/navbar.html.twig" %}
+            </div>
+            {% include "backoffice/_partials/sidebar.html.twig" %}
+            <div class="main-panel" id="main-panel">
+				<div class="container" style="min-height: calc(100vh - 62px)">
+
+                    {% block body %}{% endblock %}
+		
+				</div>
+				<footer class="footer">
+                    <div class="container-fluid">
+                        <span class="copyright mx-auto">Thé Tip Top</span>
+                    </div>
+                </footer>
+			</div>
+            
+           
+        </div>
+        <!--   Core JS Files   -->
+        <script src="/assets-backoffice/js/core/jquery.3.2.1.min.js"></script>
+        <script src="/assets-backoffice/js/core/popper.min.js"></script>
+        <script src="/assets-backoffice/js/core/bootstrap.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="/assets-backoffice/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="/assets-backoffice/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+        <!-- jQuery Scrollbar -->
+        <script src="/assets-backoffice/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <!-- Moment JS -->
+        <script src="/assets-backoffice/js/plugin/moment/moment.min.js"></script>
+        <!-- Chart JS -->
+        <script src="/assets-backoffice/js/plugin/chart.js/chart.min.js"></script>
+        <!-- jQuery Sparkline -->
+        <script src="/assets-backoffice/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+        <!-- Chart Circle -->
+        <script src="/assets-backoffice/js/plugin/chart-circle/circles.min.js"></script>
+        
+        <!-- Datatables -->
+        <script src="/assets-backoffice/js/plugin/datatables/datatables.min.js"></script>
+        <!-- Bootstrap Notify -->
+        <script src="/assets-backoffice/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+        <!-- Bootstrap Toggle -->
+        <script src="/assets-backoffice/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+        <!-- jQuery Vector Maps -->
+        <script src="/assets-backoffice/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+        <script src="/assets-backoffice/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+        <!-- Google Maps Plugin -->
+        <script src="/assets-backoffice/js/plugin/gmaps/gmaps.js"></script>
+        <!-- Dropzone -->
+        <script src="/assets-backoffice/js/plugin/dropzone/dropzone.min.js"></script>
+        <!-- Fullcalendar -->
+        <script src="/assets-backoffice/js/plugin/fullcalendar/fullcalendar.min.js"></script>
+        <script src="/assets-backoffice/js/plugin/fullcalendar/fr.js"></script>
+        <!-- DateTimePicker -->
+        <script src="/assets-backoffice/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+        <!-- Bootstrap Tagsinput -->
+        <script src="/assets-backoffice/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+        <!-- Bootstrap Wizard -->
+        <script src="/assets-backoffice/js/plugin/bootstrap-wizard/bootstrapwizard.js"></script>
+
+		<!-- jQuery Validation -->
+		<script src="/assets-backoffice/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+        <script src="/assets-backoffice/js/plugin/jquery.validate/fr.js"></script>
+
+        <!-- Summernote -->
+        <script src="/assets-backoffice/js/plugin/summernote/summernote-bs4.min.js"></script>
+        <!-- Select2 -->
+        <script src="/assets-backoffice/js/plugin/select2/select2.full.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="/assets-backoffice/js/plugin/owl-carousel/owl.carousel.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="/assets-backoffice/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+       
+        <!-- Atlantis JS -->
+        <script src="/assets-backoffice/js/atlantis.min.js"></script>
+        <!-- JS -->
+        <script src="/assets-backoffice/js/custom.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+            <script>
+                    Swal.fire({type: "{{ label }}", html: "{{ message }}"})
+            </script>
+            {% endfor %}
+        {% endfor %}
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

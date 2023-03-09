@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="robots" content="noindex" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+        <title>
+            {% block title %}{% endblock %}
+            - Thé tip top
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('/images/icon.png') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% include "front/_partials/_header.html.twig" %}
+        {% block body %}{% endblock %}
+        {% include "front/_partials/_footer.html.twig" %}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        {% block javascript %}{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+        {% for label, messages in app.flashes %}
+
+            {% for message in messages %}
+
+            <script>
+                    Swal.fire({
+                        type: "{{ label }}",
+                        html: "{{ message }}",
+                        confirmButtonText: "Revenir à l'accueil",
+                        confirmButtonColor: '#066163',
+                    })
+            </script>
+
+            {% endfor %}
+
+        {% endfor %}
+
+    </body>
+</html>

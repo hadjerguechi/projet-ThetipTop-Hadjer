@@ -1,0 +1,384 @@
+.home-container{ 
+    
+    background-image: url('/public/images/carrousel.jpg');
+    position: relative;
+    background-position: 21% 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+  
+    
+    .div-shadow{
+        position: absolute;
+        background: rgba(56, 56, 56, 0.45);
+        background: rgba(2, 21, 50, 0.4);
+    }
+    .section-game{
+        padding: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        height: 100%;
+        .down{
+            position: absolute;
+            top: 88%;
+            cursor: pointer;
+            height: 30px;
+            color: #fff;
+            text-align: center;
+            p{
+                font-size: 14px;
+            }
+            i{
+                font-size: 30px;
+                color: #fff;
+                position: relative;
+                animation: MoveUpDown 1.3s linear infinite;
+                -webkit-animation: MoveUpDown 1.3s linear infinite;
+    
+            } 
+            
+        }
+    }
+    .game-cercle{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(205, 190, 120, 0.51);
+        color: #ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+        p{
+            width: 100%;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+    }
+    .game{
+        color: #ffff;
+        width: 100%;
+        background: rgba(56, 56, 56, 0.45);
+        border-radius: 7px;
+        padding: 30px;
+        text-align: center;
+        margin-left: auto;
+        
+        .title{
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .text{
+            font-size: 22px;
+            text-align: center;
+            margin-top: 26px;
+
+        }
+        button{
+            margin: 16px 0;
+
+        }
+    }
+
+}
+.btn-game{
+    background: #CDBE78 !important;
+    border: 1px solid #CDBE78;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 33px;
+    width: 200px;
+    height: 54px;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #ffff !important;
+    &:hover{
+        color: #CDBE78 !important;
+        border: 1px solid #CDBE78;
+        background:  #ffff !important;
+    }
+}
+.section-participate{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    .card-border{
+        width: 80%;
+        background: rgba(6, 97, 99, 0.39);
+        position: absolute;
+        width: 61%;
+        top: -31px;
+        height: 381px;
+        left: 14%;
+        height: 100%;
+        border-radius: 0px 0px 0px 8px;
+    }
+    .card{
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        width: 68% ;
+        .title{
+            margin-top: 28px;
+            font-size: 36px;
+            text-align: center;
+        }
+    }
+    .card-item{
+        img{
+            width: 120px;
+            height: 150px;
+            object-fit: contain;
+        }
+        .img-desktop{
+            width: 96px !important;
+        }
+        p{
+            text-align: initial;
+            font-size: 15px;
+        }
+        
+    }
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.img {
+    width: 179px;
+    object-fit: contain;
+    height: 128px;
+}
+
+.hr-About {
+    hr{
+        background-color: #CDBE78;
+        border: 2px solid #CDBE78;
+        opacity: 1;
+        border-radius: 20px;
+        width: 70%;
+    }
+    
+}
+.gains{
+    padding: 20px;
+    .btn-gain{
+        background: #CDBE78;
+        border-radius: 6px;
+        color: #fff;
+        width: 150px;
+        margin: auto;
+        margin-top: 43px;
+        font-weight: bold;
+    }
+    .div-gain{
+        position: relative;
+        width: 40%;
+        padding-left: 122px;
+        margin-bottom: 40px;
+        .border-gain{
+            background: #CDBE78;
+            position: absolute;
+            width: 36%;
+            height: 17px;
+            top: 24px;
+            z-index: -1;
+        }
+    }
+    .cardgain{
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: 51% 44%;
+        }
+        .img-1{
+            height: 300px;
+        }
+        
+        .img-3{
+            object-fit: cover !important;
+            height: 100% !important;
+            width: 100% !important;
+            -webkit-transform: scale(0.9);
+	        transform: scale(0.98);
+	        -webkit-transition: .3s ease-in-out;
+	        transition: .3s ease-in-out;
+        }
+        .img-3:hover  {
+            -webkit-transform: scale(1.1);
+            transform: scale(1);
+        }
+
+        .div-content{
+            padding: 20px;
+            height: 189px;
+           
+            .title{
+                font-size: 16px;
+                color: #066163;
+                font-weight: bold;
+
+            }
+            .value{
+                font-size: 14px;
+
+            }
+            .content{
+                font-size: 15px;
+
+            }
+        }
+
+    }
+    .card-gains{
+        .cardgain{
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+            img{
+                width: 100%;
+            }
+            
+            .div-content{
+                padding: 10px;
+                height: 175px;
+                .title{
+                    font-size: 16px;
+                    color: #066163;
+                    font-weight: bold;
+    
+                }
+                .value{
+                    font-size: 14px;
+    
+                }
+                .content{
+                    font-size: 15px;
+    
+                }
+            }
+    
+        }
+
+    }
+}
+.gros-lot{
+    .title{
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #E59560;
+        margin-top: 20px;
+    }
+    .value{
+        font-weight: bold;
+        color: #066163;
+    }
+    .btn-gain{
+        background: #CDBE78;
+        border-radius: 6px;
+        color: #fff;
+        width: 150px;
+        font-weight: bold;
+    }
+    .groslot{
+        width: 80%;
+        background-image: url('/public/images/groslot.svg');
+        height: 223px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lot-content{
+            background: #ffff;
+            padding: 14px;
+            width: 86%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 68px;
+            p{
+                font-size: 16px;
+                margin: 0;
+            
+            }
+        }
+    }
+
+}
+@keyframes MoveUpDown {
+    0% {
+      top: 5px;
+    }
+    50% {
+      top: 25px;
+    }
+    100% {
+      top: 5px;
+    }
+  }
+  
+  @-webkit-keyframes MoveUpDown {
+    0% {
+      top: 5px;
+    }
+    50% {
+      top: 25px;
+    }
+    100% {
+      top: 5px;
+    }
+  }
+  /**********************REST PASSWORD *****************************/
+.resetpassword-container{
+
+    .card-resetpassword{
+        margin-top: 145px;
+        background: #FFFCFA;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        height: 308px;
+        padding: 45px 20px;
+        margin-bottom: 30px;
+        .btn-password{
+            background:#066163;
+            border-radius: 6px;
+            color: #fff;
+            width: 150px;
+            font-weight: bold;
+            border: 1px solid #066163 !important;
+            &:hover{
+                color: #066163 !important;
+                background: #fff !important;
+            }
+        }
+    }
+}
+/**************************Responsive ******************************/ 
+
+@media(max-width:768px){
+    .section-participate{
+        .card{
+            width: 88%;
+        }
+        .card-border{
+            width: 80% !important;
+            left: 2%;
+        }
+
+    }
+
+}

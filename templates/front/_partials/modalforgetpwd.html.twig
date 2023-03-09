@@ -1,0 +1,25 @@
+<!-- Modal forget password-->
+
+   <div class="modal fade" id="forgetpwd" tabindex="-1" aria-labelledby="forgetpwdLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h5 class="modal-title text-center" id="modalConnectionLabel">Bienvenue chez Thé Tip Top</h5>
+        <div class="modal-body my-4">
+          <form action="{{ path('forget_password')}}" method="post" id="forgetPassword">
+          <div class="row ">
+            <label class="text-center pwdlabel">Mot de passe perdu</label>
+            <div class="col-sm-8 my-4" id="password-forget">
+              <input type="email" class="form-control input-modal mb-3" name="emailforget" id="emailforget" placeholder="Adresse e-mail*" required />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-ins">Envoyer</button>
+          </form>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>

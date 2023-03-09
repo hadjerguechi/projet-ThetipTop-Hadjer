@@ -1,0 +1,48 @@
+<div class="modal fade" id="modalParticipated"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalParticipatedLabel" aria-hidden="true">
+  <div class=" modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Participation au jeu-concours</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body" id="content-participated">
+        <form action="{{ path('getNumber')}}" method="post" id="getNumber">
+          <div class="text-center ">
+            
+              <p>A fin de participer au jeu-councours et voir le gain veuillez rensiegner le numéro à dix chiffre qui se trouve sur le ticket de ciasse </p>
+              <div class="d-flex">
+                <img class="mx-auto" src="/images/number.svg" alt="numéro jeu-councours">
+              </div>
+            
+              <div class="row justify-content-center">
+                <div class="col-sm-8 my-4" id="number-form-get">
+                  
+                  <input type="text" class="form-control input-modal" id="number" name="number"  placeholder="N°:1567XXXXXX *" required>
+                </div>
+                
+              </div>
+            <button type="submit" class="btn btn-ins mb-4" id="btn-register"> 
+              <span id="text-register">Je valide</span>
+              <div class="spinner-border spinner-border-sm hide" role="status" id="loader-register">
+                <span class="sr-only"></span>
+              </div>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal-body my-4 text-center hide" id="confirmation-participated">
+        <p class="text-content">Bravo vous avez gagné</p>
+        <div class="img-participated" id="number-form-gif">
+          <img class="" src="images/gif.png" alt="Thé Tip Top" >
+
+        </div>
+
+        
+        <a href="{{ path('homepage')}}" class="btn btn-ins">Retourner à la page d'accueil</a>
+      </div>
+      
+    </div>
+  </div>
+</div>

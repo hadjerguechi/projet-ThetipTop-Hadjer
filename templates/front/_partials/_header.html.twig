@@ -1,0 +1,114 @@
+<header class="header-wrap">
+	<div class="container-fluid h-100">
+		<nav class="navbar-wrap hide-mobile">
+			<div class="logo-wrap">
+				<a href="{{ path('homepage') }}" class="link">
+					<img class="" src="images/logo.png" alt="Thé Tip Top" >
+				</a>
+			</div>
+			<ul class="navbar-list">
+				<li class="navbar-item {% if menu is defined and menu == 'homepage' %}active{% endif %}">
+					<a href="{{ path('homepage') }}" class="link">Accueil</a>
+				</li>
+				<li class="navbar-item {% if menu is defined and menu == 'center' %}active{% endif %}">
+					<a href="#" class="link">Qui somme-nous?</a>
+				</li>
+				<li class="navbar-item {% if menu is defined and menu == 'offices' %}active{% endif %}">
+					<a href="#" class="link">Nos gains</a>
+				</li>
+				
+			</ul>
+			<div class="navbar-actions">
+				{% if app.session.get('id') %}
+					<button class="btn navbar-btn call-btn btn-cnx" id="compte">
+						<i class="fa-solid fa-user compte"></i>
+						Compte
+					</button>
+
+					<div id="deconnexion" class="hide">
+						<div class="bloc-deco d-flex flex-row" id="bloc-profil">
+							<a href="{{ path('app_profil') }}" class="btn-deco">
+								<p></p>
+								<p>Voir mon profil</p>
+							</p>
+						</a>
+						<i class="fa-solid fa-eye voir mon profil"></i>
+					</div>
+					<div class="bloc-deco d-flex flex-row" id="bloc-deco">
+						<a href="{{ path('logout') }}" class="btn-deco">
+							<p>Se déconnecter</p>
+						</a>
+						<i class="fa-solid fa-arrow-right-from-bracket déconnexion"></i>
+						
+					</div>
+				</div>
+			{% else %}
+				<button id="login-header" type="button" class="btn navbar-btn btn-cnx" data-bs-toggle="modal" data-bs-target="#login" >Connexion</button>
+        		<button id="login-header"  type="button" class="btn navbar-btn btn-ins" data-bs-toggle="modal" data-bs-target="#modalSignup">Inscription</button>
+			{% endif %}
+
+		
+		</div>
+	</nav>
+	<div class="logo-responsive hide-desktop">
+		<nav class="container-full navbar fixed-top navbar-expand-lg navbar-light bg-white">
+			<div class="container">
+				<a class="navbar-brand navbarBrand" href="{{ path('homepage') }}">
+					<img class="img-logo" src="{{ asset('/images/logo.png') }}" alt="Thé Tip Top">
+				</a>
+				<button class="navbar-toggler d-lg-none border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<div id="nav-icon2">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="main-ul navbar-nav ml-auto">
+						<li class="navbar-item {% if menu is defined and menu == 'homepage' %}active{% endif %}">
+							<a href="{{ path('homepage') }}" class="link">Accueil</a>
+						</li>
+						<li class="navbar-item {% if menu is defined and menu == 'center' %}active{% endif %}">
+							<a href="#" class="link">Qui somme-nous?</a>
+						</li>
+						<li class="navbar-item {% if menu is defined and menu == 'offices' %}active{% endif %}">
+							<a href="#" class="link">Nos gains</a>
+						</li>
+						
+						
+						{% if app.session.get('id') %}
+						<li class="navbar-item {% if menu is defined and menu == 'account' %}active{% endif %}">
+							<a href="{{ path('app_profil') }}" class="link">Mon compte</a>
+						</li>
+						{% endif %}
+					</ul>
+
+					{% if app.session.get('id') %}
+						<ul class="main-ul navbar-nav ml-auto">
+							<li>
+								<div class="deconnexion">
+									<img src="{{ asset('images/icons/logout-white.svg')}}" alt="déconnexion">
+									<a href="{{ path('logout') }}" class="btn-deco">
+										<p>Se déconnecter</p>
+									</a>
+								</div>
+							</li>
+						</ul>
+					{% else %}
+						<ul class="main-ul navbar-nav ml-auto">
+							<li>
+								<button type="buton" class="btn nav-link login-register d-flex align-items-center" data-toggle="modal" data-target="#login-register">
+									<span class="px-md-2 text-dark active">Connexion/Inscription</span>
+								</button>
+							</li>
+						</ul>
+					{% endif %}
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+</header>

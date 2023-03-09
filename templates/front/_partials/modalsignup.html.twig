@@ -1,0 +1,86 @@
+<!-- Modal connection-->
+
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="modalConnectionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h5 class="modal-title text-center" id="modalConnectionLabel">Bienvenue chez Thé Tip Top</h5>
+        <div class="modal-body my-4" id ="content-register">
+          <div class="img-connect">
+            <a class="btn-img" href=""> <img src="{{asset('/images/facebook.svg')}}" alt="facebook"></a>
+            <a class="btn-img" href=""> <img src="{{asset('/images/google.svg')}}" alt="google"></a>
+          </div>
+          <p class="text-center">Ou</p>
+          <form action="{{ path ('registration')}}" method="post" id="form-register">
+            <div class="row">
+              <div class="col-6">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom*">
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom*">
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-sm-8 my-4">
+                <input type="text" class="form-control input-modal" id="address" name="address" placeholder="Adresse*" required>
+              </div>
+              <div class="col-sm-8" id="email-form-register">
+                <input type="email" class="form-control input-modal" id="email" name="email" placeholder="Adresse e-mail*" required>
+              </div>
+            </div>
+            <div class="row  my-4">
+              <div class="col-6">
+                <input type="tel" class="form-control" id="lastname" name="phone" placeholder="Tel 06....*">
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" id="firstname" name="birthday" placeholder="Date de naissance*">
+              </div>
+            </div>
+
+            <div class="row my-4">
+              <div class="col-6 position-relative">
+                <input type="password" class="form-control password" id="password" name="password" placeholder="Mode de passe*" required>
+                <span class="eye-password-content">
+							    <i class="fas fa-eye-slash hide eye" id="eye"></i>
+						    </span>
+              </div>
+              <div class="col-6 position-relative">
+                <input type="password" class="form-control password" id="inputPassword2" placeholder="Confirmation du mot de passe*" required>
+                <span class="eye-password-content">
+							    <i class="fas fa-eye-slash hide eye" id="eye"></i>
+						    </span>
+              </div>
+            </div>
+            <div>
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+              <label class="form-check-label" for="defaultCheck1">J’ai lu et j’accepte les <strong> conditions générales </strong> de Thé Tip Top</label>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="submit" class="btn btn-ins" id="btn-register">
+                <span id="text-register">  S'inscrire</span>
+                <div class="spinner-border spinner-border-sm hide" role="status" id="loader-register">
+                  <span class="sr-only"></span>
+                </div>
+              </button>
+            </div>
+          </form>
+        
+            
+          
+        </div>
+        <div class="modal-body my-4 text-center hide" id="confirmation-register">
+          <p> Merci de valider votre mail afin de participer au jeu-concour de Thé Tip Top </p>
+          <div class="log-signup">
+            <img class="" src="images/logo.png" alt="Thé Tip Top" >
+          </div>
+          
+          <a href="{{ path('homepage')}}" class="btn btn-ins">Continuer</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>

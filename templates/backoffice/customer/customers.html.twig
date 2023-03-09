@@ -1,0 +1,93 @@
+{% extends "backoffice/base-bo.html.twig" %}
+
+
+{% block title %}Clients{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="page-inner">
+
+    {% if customers is empty %}
+   
+    <div class="row">
+        <h2 class="mt-2">Aucun client</h2>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="prospects-datatables" class="display table table-striped table-hover" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                            <thead>
+                            <tr>
+                                <th>Nom </th>
+                                <th>Email</th>
+                                <th>Téléphone</th>
+                                <th>Créé le</th>
+                                <th>Gain</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for customer in customers %}
+                                <tr>
+                                    <td>
+                                        {{ customer.lastName }}, {{ customer.firstName }}
+                                        
+                                    </td>
+                                    <td data-tableexport-display="always">{{ customer.email }}</td>
+                                    <td>{{ customer.phone }}</td>
+                                    <td>{{ customer.createdAt | date('d/m/Y') }}</td>
+                                    <td>
+                                       
+                                            Non
+                                       
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-row align-items-end justify-content-end">
+                                           
+                                            <a href="{{ path('customer_detail', {'id': customer.id}) }}" class="btn btn-icon btn-round btn-primary btn-sm mx-1">
+                                                <i class="far fa-eye"></i>
+                                            </a>
+                                            <a href="{{ path('edit_customer', {'id': customer.id}) }}" class="btn btn-icon btn-round btn-primary btn-sm mx-1">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        $('#prospects-datatables').DataTable({
+            columnDefs: [
+                { orderable: false, targets: [-1, -1 ]}
+            ],
+            "order": [[ 3, "desc" ]],
+        });
+
+        $('.color-picker-input').on('blur', function () {
+            $(this).closest('form').submit();
+        });
+
+        
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.table2excel.min.js"></script>
+{% endblock %}

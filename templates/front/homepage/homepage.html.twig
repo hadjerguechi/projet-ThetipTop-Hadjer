@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jeu concours{% endblock %}
+
+{% block body %}
+
+<div>
+    <div class="home-container" >
+        {% include "front/_partials/modalsignup.html.twig" %}
+        {% include "front/_partials/modalsignin.html.twig" %}
+        {% include "front/_partials/modalforgetpwd.html.twig" %}
+        {% include "front/_partials/modalparticipated.html.twig" %}
+        <div class="div-shadow"></div>
+        <section class="section-game">
+            <div class="col-xl-3 col-md-4">
+                <div class="game-cercle ">
+                    <p class="m-0 text-center">
+                        100%
+                        GAGNANT
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="col-xl-6 col-md-10 col-11">
+                <div class="game">
+                    <p class="title">Grand jeu-concours </p>
+                    <p class="text">
+                        Pour l’ouverture de sa 10ème boutique Thé Tip Top organise un jeu-concours 100% gagnant 
+                    </p>
+                    {% if app.session.get('id') %}
+                    <button class="btn btn-game" data-bs-toggle="modal" data-bs-target="#modalParticipated">
+                        Je participe
+                    </button>
+                    {% else %}
+                        <button class="btn btn-game" data-bs-toggle="modal" data-bs-target="#login">
+                        Je participe
+                        </button>
+                    {% endif %}
+    
+                </div>
+            </div>
+            <div class="down">
+                <p class="m-0">Découvrir nos gains</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            
+        
+        </section>
+        
+    </div>
+    <section class="bg-grey my-5">
+        <div class="row mx-0 my-4 justify-content-center align-items-center">
+            <div class="col-xl-3 col-2 hr-About">
+              <hr class="ms-auto">
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-4 col-7 text-center">
+                <h2>Qui sommes-nous ?</h2>
+            </div>
+            <div class="col-xl-3 col-2 hr-About">
+                <hr class="me-auto">
+            </div>
+        </div>
+        <div class="row  mx-0 justify-content-center my-4">
+            <div class="col-xl-3 text-center ">
+                <img class = "img" src="/images/logo-min.png"></img>
+            </div>
+            <div class="col-xl-5 col-md-6 col-10">
+                <p class="mt-3"> 
+                    ThéTipTop est une société ayant pour activité la promotion de gammes de thés de très grande qualité avec 
+                    des mélanges signatures de l’entreprise, des thés détox, des thés blancs, des thés légumes, infusions, etc.
+                    L’ensemble des thés sont bios et Handmades.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section class="my-4 section-participate">
+        <div class="card-border"></div>
+        <div class="card">
+            <p class=" title">Comment participer ?</p>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-md-7 col-12 card-item text-center mx-2 p-3 mb-3">
+                    <img src="images/cart.png" alt="chariots">
+                    <p>
+                        Acheter un produit Thé Tip Top d’une valeur superieure à 49€ et conserver le ticket caisse oû est inscrit un numéro à 10 chiffres
+    
+                    </p>
+                </div>
+                <div class="col-xl-3 col-md-7 col-12 card-item text-center mx-2 p-3 mb-3">
+                    <img  class="img-desktop" src="images/desktop.png" alt="ordinateur">
+                    <p>
+                        Rendez-vous sur le site Thé Tip Top et proceder à votre inscription
+                    </p>
+                </div>
+                <div class="col-xl-3 col-md-7 col-12 card-item text-center mx-2 p-3 mb-3">
+                    <img  src="images/person.png" alt="personne">
+                    <p>
+                        Connectez-vous et participer au jeu-concours en inscrivant le numéro à 10 chiffres 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    <section class="gains mb-4">
+        <div class="div-gain">
+            <h2>Nos gains</h2>
+            <div class="border-gain"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-md-6 col-10 ">
+                <div class="cardgain">
+                    <img class="img-1" src="images/gain1.png" alt="gain"> 
+                    <div class="div-content">
+                        <p class="title">L'infuseur</p>
+                        <p class="value">Valeur d’une 15€</p>
+                        <p class="content">Un filtre à thé en acier, idéal pour infuser son thé dans une grande tasse.</p>
+                    </div>
+                </div> 
+                <button class="btn btn-gain">Je participe</button>
+            </div>
+            <div class="col-xl-7 col-12">
+                <div class="card-gains row">
+                    <div class="col-md-6">
+                        <div class="cardgain">
+                            <img   src="images/gain2.png" alt="gain"> 
+                            <div class="div-content">
+                                <p class="title">Une boite de 100g d’un thé détox </p>
+                                <p class="value">Valeur d’une 15€</p>
+                                <p class="content">Ce thé Détox, connu pour ses propriétés antioxydantes, est ici associé au sarrasin, riche en magnésium.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="cardgain">
+                            <img  src="images/gain2.png" alt="gain"> 
+                            <div class="div-content">
+                                <p class="title">Une boite de 100g d’un thé d’infusion</p>
+                                <p class="value">Valeur d’une 15€</p>
+                                <p class="content">Le thé vert Infusion contribue au bien-être et au renforcement du corps. </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row cardgain mx-0 my-3">
+                    <div class="col-xl-4 col-md-6 p-0">
+                        <img class="img-3" src="images/gain3.svg" alt="gain"> 
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-10">
+                        
+                        <div class="div-content">
+                            <p class="title">Une boite de 100g d’un thé signature</p>
+                            <p class="value">Valeur d’une 15€</p>
+                            <p class="content">Un thé vert parfaitement équilibré entre la douceur de la framboise et la fraîcheur de la menthe. Une association idéale pour une pause bien méritée, gourmande et fruitée.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center ">
+            <div class="col-xl-5 col-md-6 col-10 ">
+                <div class="cardgain">
+                    <img src="images/gain4.svg" alt="gain"> 
+                    <div class="div-content">
+                        <p class="title">Coffret découverte Détox</p>
+                        <p class="value">Valeur d’une 39€</p>
+                        <p class="content">Un délicieux trio Détox entre en scène : citron, mandarine et limette rarement réunis ensemble autour du thé vert, offrent un spectacle à la saveur unique et profonde.  </p>
+                    </div>
+                </div> 
+
+            </div>
+            <div class="col-xl-5 col-md-6  col-10">
+                <div class="cardgain">
+                    <img src="images/gain5.svg" alt="gain"> 
+                    <div class="div-content">
+                        <p class="title">Coffret découverte Signatures</p>
+                        <p class="value">Valeur d’une 69€</p>
+                        <p class="content">Toutes les saveurs de nos thés signatures réunies 
+                            en un seul coffret découverte.  
+                        </p>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+
+    </section>
+    <section class="gros-lot row mx-0 justify-content-center">
+        <div class="row groslot">
+            <p class="title">LE GROS LOT</p>
+            <div class="d-flex justify-content-center">
+                <div class="row mx-0 lot-content ">
+                    <div class="col-xl-9">
+                        <p>
+                            À l’issue du jeu-concours, un tirage au sort sera effectué parmi tous les participants afin de déterminer le gagnant 
+                            d’un an de thé d’une valeur  <span class="value"> 360€ </span>
+                        </p>
+                    </div>
+                    <div class="col-xl-3">
+                        <button class="btn btn-gain"> Je participe</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+    
+    
+</div>
+
+  
+ 
+  
+
+
+
+{% endblock %}

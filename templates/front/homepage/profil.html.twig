@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace personnel{% endblock %}
+
+{% block body %}
+
+<div>
+<div class="profil-container">
+  <div class="row align-items-center my-5">
+    <div class="col-3 my-5 mx-5 btn-information">
+        <div class = "my-3">
+            <button  type="button" id="login-header" class="btn btn-light">Profil</button>
+        </div>
+        <div class = "my-3">
+            <button  type="button" id="login-header"  class="btn btn-light">Mes gains</button>
+        </div>
+        <div id ="compte">
+            <button  type="button" id="deconnexion" class="btn btn-light"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+        </div>
+    <div>
+
+        </div>   
+    </div>
+
+    <div class="col-7">
+            <div>
+                <h2>Informations personnelles <button type="button" class="btn"  id ="button" value="Click"><i class="fa-solid fa-pen-to-square"></i></button><button  type="button" id="btn"  class="btn edit-button">Enregistrer les modifications    <i class="fa-solid fa-check"></i></button></h2>
+            </div>
+    <div class="profil-border">        
+     <div class="row my-3 mx-3">
+            <div class="col">
+              <strong>Nom</strong>
+            </div>
+            <div class="col">
+              <strong>Prénom</strong>
+            </div>
+            <div class="col">
+              <strong>Date de naissance</strong>
+            </div>
+      </div>
+      <div class="row mx-3">
+            <div class="col">
+              <input type="text" class="form-control input-modal profil-input-style" id="firstNameInput"  placeholder="Adresse*" >
+              <label id="firstNameLabel">Akli</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control input-modal profil-input-style" id="lastNameInput"  placeholder="Adresse*" >
+              <label id="lastNameLabel">Mohammed</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control input-modal profil-input-style" id="birthDateInput"  placeholder="Adresse*" >
+              <label id="birthDateLabel">0665580878</label>
+            </div>
+      </div>
+      <div class="row my-3 mx-3">
+            <div class="col">
+              <strong>Adresse</strong>
+            </div>
+            <div class="col">
+              <strong>Email</strong>
+            </div>
+            <div class="col">
+              <strong>Téléphone</strong>
+            </div>
+      </div>
+      <div class="row my-3 mx-3 ">
+            <div class="col">
+            <input type="text" class="form-control input-modal profil-input-style" id="adressInput"  placeholder="Adresse*" >
+            <label id="adressLabel">32, Allée vauban</label>
+            </div>
+            <div class="col">
+            <input type="text" class="form-control input-modal profil-input-style" id="emailInput"  placeholder="Adresse*" >
+            <label id="emailLabel">mohammedakli05@gmail.com</label>
+           
+            </div>
+            <div class="col">
+            <input type="text" class="form-control input-modal profil-input-style" id="numberInput"  placeholder="Adresse*" >
+            <label id="numberLabel">0665580878</label>
+            
+            </div>
+      </div>
+      
+    </div>  
+    <div>
+            <button type="button" class="btn forgot-pwd-btn" data-bs-toggle="modal" data-bs-target="#forgetpwd"><u>J’ai perdu mon mot de passe</u></button>
+    </div>   
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+{% endblock %}

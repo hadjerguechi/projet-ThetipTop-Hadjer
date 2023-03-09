@@ -1,0 +1,171 @@
+#modalSignup{
+    .input-modal {
+        width: 29rem;
+    }
+    .img-connect{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .btn-img{
+            width: 35%;
+            height: 50px;
+            margin: 10px;
+            border: 1px solid #CDBE78;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            img{
+                width: 73%;
+                
+            }
+        }
+    }
+    .btn-ins {
+        background:#066163!important;
+        color: #ffff !important;
+        width: 150px;
+        border-radius: 60px;
+        border: 1px solid  #066163!important;
+        font-weight: 700;
+        &:hover{
+            background:#ffff !important;
+            color: #066163!important;
+            border: 1px solid  #066163!important;
+
+        }
+    }
+    .modal-content{
+        border-radius: 0.9rem;
+    }
+    .modal-header {
+        border-bottom: 0;
+    }
+
+    ::placeholder {
+        font-size: 0.8em;
+      }
+    .log-signup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+        margin-bottom: 30px;
+        img{
+            width: 220px;
+        }
+    }
+    .form-error {
+        color: darkred;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+#login{
+    .input-modal {
+        width: 29rem;
+    }
+    .btn-ins {
+        background:#066163!important;
+        color: #ffff !important;
+        width: 150px;
+        border-radius: 60px;
+        border: 1px solid  #066163!important;
+        &:hover{
+            background:#ffff !important;
+            color: #066163!important;
+            border: 1px solid  #066163!important;
+
+        }
+    }
+    .modal-content{
+        border-radius: 0.9rem;
+    }
+    .modal-header {
+        border-bottom: 0;
+    }
+    
+    ::placeholder {
+        font-size: 0.8em;
+      }
+}
+/*******************Hide password (eye)********************/
+.eye-password-content {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  
+    .eye {
+      font-size: 20px;
+      cursor: pointer;
+    }
+}
+.modal-footer{
+    border-top: 0 !important;
+}
+#forgetpwd{
+    .input-modal {
+        width: 29rem;
+    }
+    .form-success {
+        color:#066163;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .form-error {
+        color: darkred;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .btn-ins {
+        background:#066163!important;
+        color: #ffff !important;
+        width: 150px;
+        border-radius: 60px;
+    }
+    .modal-content{
+        border-radius: 0.9rem;
+    }
+    .modal-header {
+        border-bottom: 0;
+    }
+    .pwdlabel{
+        color: #CDBE78;
+        font-weight: bold;
+    }
+    ::placeholder {
+        font-size: 0.8em;
+      }
+}
+/**************** Model participated ************************/ 
+#modalParticipated{
+    .modal-content{
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        .btn-ins {
+            background:#CDBE78!important;
+            color: #ffff !important;
+            width: 253px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .text-content{
+            font-size: 16px;
+            font-weight: 800;
+        }
+        .form-gif{
+            font-size: 20px;
+            font-weight: bold;
+            color:#066163;
+        }
+        .img-participated{
+            img{
+                height: 140px;
+                width: 140px;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    }
+}
